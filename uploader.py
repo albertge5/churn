@@ -23,7 +23,7 @@ from rankmaniac import Rankmaniac
 unbuff_stdout = os.fdopen(sys.stdout.fileno(), 'w', 0) # unbuffered
 
 def do_main(team_id, access_key, secret_key,
-            infile='input.txt', max_iter=50):
+            infile='EmailEnron', max_iter=50):
     """
     Submits a new map-reduce job to Amazon EMR and waits for it to
     finish executing.
@@ -98,8 +98,8 @@ def do_main(team_id, access_key, secret_key,
 
 if __name__ == '__main__':
 
-    team_id = 'YOUR-TEAM-ID'
-    access_key = 'YOUR-ACCESS-KEY'
-    secret_key = 'YOUR-SECRET-KEY'
+    team_id = 'chum'
+    access_key = 'AKIAIO6AAM3BIQSVKTFA'
+    secret_key = 'sA+GF6xED8495vUTPcATOeExWEy0mrt0yVWBvT1U'
 
     do_main(team_id, access_key, secret_key)
