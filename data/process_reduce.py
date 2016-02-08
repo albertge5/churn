@@ -6,19 +6,19 @@ import sys
 # This program simply represents the identity function.
 #
 
-MAX_ITER = 2
+MAX_ITER = 1
 # keeps track fo the top 20's scores and which nodes
 lst = []
 
 is_done = False
 
 for line in sys.stdin:
-    if not is_done: 
+    if not is_done:
         res = line.split('\t')
         key = res[0]
         vals = res[1].split(',')
 
-        if key.startswith('NodeId') and int(vals[0]) == MAX_ITER:
+        if key.startswith('NodeId') and int(vals[0]) >= MAX_ITER:
             for vals in lst:
                 curr_rank = vals[0]
                 node = vals[1]
@@ -36,5 +36,5 @@ for line in sys.stdin:
 
         else:
             sys.stdout.write(line)
-    
+
 
