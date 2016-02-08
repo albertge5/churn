@@ -13,6 +13,7 @@ key = ""
 rank = 0.0
 old_rank = 0.0
 adj_list = []
+curr_iter = 0
 
 for line in sys.stdin:
 
@@ -20,8 +21,9 @@ for line in sys.stdin:
     node = res[0]
     value = res[1].split(',')
     if len(value) > 1:
-        contrib = float(value[0])
-        contrib_by = (value[1]).rstrip()
+        curr_iter = int(value[0])
+        contrib = float(value[1])
+        contrib_by = (value[2]).rstrip()
 
         if node != key:
             if key == "":
@@ -36,7 +38,8 @@ for line in sys.stdin:
                 # of each node's contribution to an element by alpha
                 rank = alpha * (rank) + (1 - alpha)
                 sys.stdout.write("NodeId:" + key +\
-                        "\t" + str(rank) + "," + str(old_rank) + "," +\
+                        "\t" + str(curr_iter) + "," +\
+                        str(rank) + "," + str(old_rank) + "," +\
                         ",".join(adj_list) + "\n")
                 # reset rank, adj_list
                 rank = 0.0
@@ -47,4 +50,12 @@ for line in sys.stdin:
     else:
         old_rank = float(value[0])
 
+rank = alpha * (rank) + (1 - alpha)
+sys.stdout.write("NodeId:" + key +\
+        "\t" + str(curr_iter) + "," +\
+        str(rank) + "," + str(old_rank) + "," +\
+        ",".join(adj_list) + "\n")
+# reset rank, adj_list
+rank = 0.0
+adj_list = []
 
