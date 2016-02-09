@@ -13,7 +13,7 @@ lst = []
 is_done = False
 
 for line in sys.stdin:
-    if not is_done: 
+    if not is_done:
         res = line.split('\t')
         key = res[0]
         vals = res[1].split(',')
@@ -36,5 +36,5 @@ for line in sys.stdin:
 
         else:
             sys.stdout.write(line)
-    
+
 
