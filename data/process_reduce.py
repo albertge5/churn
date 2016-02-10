@@ -7,7 +7,7 @@ import sys
 #
 
 
-MAX_ITER = 40
+MAX_ITER = 50
 
 # keeps track fo the top 20's scores and which nodes
 lst = []
@@ -19,7 +19,6 @@ for line in sys.stdin:
         res = line.split('\t')
         key = res[0]
         vals = res[1].split(',')
-
         if key.startswith('NodeId') and int(vals[0]) >= MAX_ITER:
             for vals in lst:
                 curr_rank = vals[0]

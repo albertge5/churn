@@ -25,5 +25,6 @@ for line in sys.stdin:
         top.sort(reverse=True)
         sys.stdout.write('A:' + str(node) \
                 + '\t' + str(curr_rank) + '\n')
+        
     sys.stdout.write(line)
 
