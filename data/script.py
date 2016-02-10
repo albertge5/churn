@@ -3,7 +3,7 @@ import os
 
 MAX_ITER = 20
 
-os.system("cp EmailEnron email_input.txt")
+os.system("cp GNPn100p05 email_input.txt")
 # os.system("cp EmailEnron email_output.txt")
 for i in range(MAX_ITER):
     os.system("python pagerank_map.py < email_input.txt | sort | python "

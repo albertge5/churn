@@ -42,7 +42,7 @@ for line in sys.stdin:
 
         # its to-be previous rank
     result2 = str(node[7:]).rstrip() + "\t" + str(curr_rank) + "\n"
-    sys.stdout.write(result2)
+    # sys.stdout.write(result2)
 
 
 # dict = {}

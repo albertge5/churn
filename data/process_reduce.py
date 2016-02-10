@@ -6,7 +6,7 @@ import sys
 # This program simply represents the identity function.
 #
 
-MAX_ITER = 1
+MAX_ITER = 40
 # keeps track fo the top 20's scores and which nodes
 lst = []
 
