@@ -1,6 +1,6 @@
 import os
 
-MAX_ITER = 25
+MAX_ITER = 20
 os.system("cp EmailEnron email_input.txt")
 # os.system("cp EmailEnron email_output.txt")
 for i in range(MAX_ITER):
